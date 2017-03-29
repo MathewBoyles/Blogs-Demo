@@ -88,8 +88,7 @@ html {
   }
 }
 
-#lightbox,
-#lightbox > .lightbox-overlay {
+#lightbox, #lightbox > .lightbox-overlay {
   height: 100%;
   left: 0;
   top: 0;
@@ -99,32 +98,32 @@ html {
 #lightbox {
   display: none;
   position: fixed;
-}
-#lightbox > .lightbox-overlay {
-  background: rgba(34, 34, 34, 0.8);
-  cursor: pointer;
-  position: absolute;
-  z-index: 10001;
-}
-#lightbox > .lightbox-content {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 10002;
-}
-#lightbox > .lightbox-content > img {
-  box-shadow: 0 0 5px 0px #404040;
-}
-#lightbox > .lightbox-content > span {
-  color: #FFF;
-  display: inherit;
-}
-#lightbox > .lightbox-close {
-  cursor: pointer;
-  right: 10px;
-  position: fixed;
-  top: 10px;
-  width: 32px;
-  z-index: 10003;
+  .lightbox-overlay {
+    background: rgba(34, 34, 34, 0.8);
+    cursor: pointer;
+    position: absolute;
+    z-index: 10001;
+  }
+  .lightbox-content {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 10002;
+    img {
+      box-shadow: 0 0 5px 0px #404040;
+    }
+    span {
+      color: #FFF;
+      display: inherit;
+    }
+  }
+  .lightbox-close {
+    cursor: pointer;
+    right: 10px;
+    position: fixed;
+    top: 10px;
+    width: 32px;
+    z-index: 10003;
+  }
 }
