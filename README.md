@@ -7,9 +7,10 @@ Default CSS type.
 Uses the Block Element Modifier (BEM) naming system for class names.
 
 ## Blog_SASS
-Uses SASS, converted into CSS and CSS.min with Koala
+Uses SASS converted into CSS and CSS.min with Koala.
 
-
+---
 
 Free to copy.
-www.mathewboyles.com
+
+[www.mathewboyles.com](https://mathewboyles.com)
