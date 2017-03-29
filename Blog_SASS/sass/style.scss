@@ -88,42 +88,4 @@ html {
   }
 }
 
-#lightbox, #lightbox > .lightbox-overlay {
-  height: 100%;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 10000;
-}
-#lightbox {
-  display: none;
-  position: fixed;
-  .lightbox-overlay {
-    background: rgba(34, 34, 34, 0.8);
-    cursor: pointer;
-    position: absolute;
-    z-index: 10001;
-  }
-  .lightbox-content {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 10002;
-    img {
-      box-shadow: 0 0 5px 0px #404040;
-    }
-    span {
-      color: #FFF;
-      display: inherit;
-    }
-  }
-  .lightbox-close {
-    cursor: pointer;
-    right: 10px;
-    position: fixed;
-    top: 10px;
-    width: 32px;
-    z-index: 10003;
-  }
-}
+@import 'lightbox';
