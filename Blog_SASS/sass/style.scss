@@ -1,0 +1,130 @@
+html {
+  background: #FFF;
+  font-family: Arial;
+}
+.container {
+  display: table;
+  height: auto;
+  left: 50%;
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  .blog {
+    display: inline-block;
+    height: auto;
+    width: 70%;
+    .blog-item {
+      &:not(:last-child) {
+        border-bottom: 1px solid #EEE;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+      }
+      .blog-img {
+        float: left;
+        height: 150px;
+        margin-right: 10px;
+      }
+      .blog-content {
+        h2 {
+          margin: 0;
+        }
+        span {
+          color: #cacaca;
+          display: inline-block;
+          font-size: 75%;
+          margin-top: 5px;
+          text-transform: uppercase;
+        }
+        p {
+          color: #a2a2a2;
+          a {
+            color: #000;
+            font-weight: bold;
+            transition: color 0.5s;
+            &:hover {
+              color: #0056c7;
+            }
+          }
+        }
+      }
+    }
+    &.blog-left {
+      .blog-item {
+        height: 150px;
+        margin-right: 40px;
+        &:not(:last-child) {
+          margin-bottom: 25px;
+          padding-bottom: 25px;
+        }
+        img {
+          cursor: pointer;
+        }
+        .blog-content {
+          height: 110px;
+          padding: 12px 0;
+        }
+      }
+    }
+    &.blog-right {
+      float: right;
+      width: 30%;
+      .blog-item {
+        height: 75px;
+        .blog-img {
+          height: 75px;
+        }
+        .blog-content {
+          height: 65px;
+          padding: 5px 0;
+          h2 {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#lightbox,
+#lightbox > .lightbox-overlay {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+#lightbox {
+  display: none;
+  position: fixed;
+}
+#lightbox > .lightbox-overlay {
+  background: rgba(34, 34, 34, 0.8);
+  cursor: pointer;
+  position: absolute;
+  z-index: 10001;
+}
+#lightbox > .lightbox-content {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 10002;
+}
+#lightbox > .lightbox-content > img {
+  box-shadow: 0 0 5px 0px #404040;
+}
+#lightbox > .lightbox-content > span {
+  color: #FFF;
+  display: inherit;
+}
+#lightbox > .lightbox-close {
+  cursor: pointer;
+  right: 10px;
+  position: fixed;
+  top: 10px;
+  width: 32px;
+  z-index: 10003;
+}
